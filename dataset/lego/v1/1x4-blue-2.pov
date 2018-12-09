@@ -30,8 +30,9 @@
 #declare LDXRadius = 43.543083;
 
 // Camera settings
-#declare LDXCameraLoc = < 30.498661,-84.124619,-58.96336 >;	// Camera Location vector
-#declare LDXCameraLookAt = < -31.32668333828869577928,-20.63766070175900324557,1.29301368051966392159 >;	// Camera look-at point vector
+#declare LDXCameraLoc = < 200, -300, -200 >;	// Camera Location vector
+//#declare LDXCameraLookAt = < -31.32668333828869577928,-20.63766070175900324557,1.29301368051966392159 >;	// Camera look-at point vector
+#declare LDXCameraLookAt = < 0,0,0 >;	// Camera look-at point vector
 #declare LDXCameraSky = < -0.42426460699182555469,-0.80561720789089319439,0.41349783264746753364 >;	// Camera sky vector (<0,-1,0> will usually work for standard "up")
 
 #declare LDXFloorLoc = LDXMaxY;	// Floor location. (Dependent on floor axis; MAX_Y is bottom of model)
@@ -70,7 +71,7 @@ camera {
 	sky LDXCameraSky
 	right LDXCamAspect * < -1,0,0 >
 	look_at LDXCameraLookAt
-	angle 90
+	angle 63
 }
 #end
         

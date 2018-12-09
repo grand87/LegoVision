@@ -1,7 +1,7 @@
 #declare GD_LightPointsX = 8;
 #declare GD_LightPointsY = 8;
 
-#declare GD_SkipAreaLight = 1;
+//#declare GD_SkipAreaLight = 0;
 
 #ifndef (LDXSkipLight1)
 light_source {	// Latitude,Longitude: 45,0,LDXRadius*2
