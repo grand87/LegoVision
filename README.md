@@ -48,3 +48,8 @@ https://spectrum.ieee.org/geek-life/hands-on/how-i-built-an-ai-to-sort-2-tons-of
 2. Lego Minifigure face location on image
 	2.1 prepare dataset with lego heads
 	
+## Articles
+
+### 3D generated rendered dataset
+I got inspiriation after the article https://shapenet.cs.stanford.edu/projects/RenderForCNN/. My ideas is to use LeoCAD + LDView + POV-Ray to generate set of images wiht real environment but rendered Lego bricks.
+These images would contain suplimentary metadata about the brick - exact position, amount of visibel dots, angle, distance, dimensions, etc.
