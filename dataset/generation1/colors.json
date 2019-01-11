@@ -1,0 +1,13 @@
+[
+	"black"			: "0",
+	"blue"			: "1",
+	"green"			: "2",
+	"rad"			: "4",
+	"brown"			: "6",
+	"light_gray"	: "7",
+	"dark_gray"		: "8",
+	"bright_green"	: "10",
+	"yellow"		: "14",
+	"orange"		: "25",
+	"redish_brown"	: "70"	
+]

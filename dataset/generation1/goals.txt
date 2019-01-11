@@ -1,0 +1,7 @@
+1. need to write template for ldr file
+2. with python script + json produce set of required ldr files
+3. for every ldr file produce pov file
+	3.1 for every produced pov file - based on template produce set of combinations pov file depends on:
+		- model color
+4. for every produced pov file render set of png files based on model rotation
+5. repeat steps 3 + 4 for different backgrounds
