@@ -1,0 +1,15 @@
+{
+	"models": [{
+			"name": "1x4",
+			"ldfile": "3010.dat"
+		},
+		{
+			"name": "2x4",
+			"ldfile": "3001.dat"
+		},
+		{
+			"name": "2x2",
+			"ldfile": "3003.dat"
+		}
+	]
+}
