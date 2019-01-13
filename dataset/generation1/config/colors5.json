@@ -1,0 +1,9 @@
+{
+    "colors": {
+        "black": 0,
+        "blue": 1,
+        "red": 4,
+        "brown": 6,
+        "orange": 25
+    }
+}
