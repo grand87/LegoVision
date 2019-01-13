@@ -9,12 +9,12 @@
 
 #version 3.6;
 
-#declare LDXQual = 2;	// Quality (0 = Bounding Box; 1 = No Refraction; 2 = Normal; 3 = Stud Logos)
-#declare LDXSW = 0.5;	// Seam Width (0 for no seams)
-#declare LDXStuds = 1;	// Show studs? (1 = YES; 0 = NO)
-#declare LDXRefls = 1;	// Reflections? (1 = YES; 0 = NO)
-#declare LDXShads = 1;	// Shadows? (1 = YES; 0 = NO)
-#declare LDXFloor = 1;	// Include Floor? (1 = YES; 0 = NO)
+#declare LDXQual = 2;   // Quality (0 = Bounding Box; 1 = No Refraction; 2 = Normal; 3 = Stud Logos)
+#declare LDXSW = 0.5;   // Seam Width (0 for no seams)
+#declare LDXStuds = 1;  // Show studs? (1 = YES; 0 = NO)
+#declare LDXRefls = 1;  // Reflections? (1 = YES; 0 = NO)
+#declare LDXShads = 1;  // Shadows? (1 = YES; 0 = NO)
+#declare LDXFloor = 1;  // Include Floor? (1 = YES; 0 = NO)
 
 // Model bounds information
 #declare LDXMinX = -70;
@@ -30,17 +30,17 @@
 #declare LDXRadius = 43.543083;
 
 // Camera settings
-#declare LDXCameraLoc = < 150, -150, -150 >;	// Camera Location vector
-#declare LDXCameraLookAt = < 0,0,0 >;	// Camera look-at point vector
-#declare LDXCameraSky = < -0.42426460699182555469,-0.80561720789089319439,0.41349783264746753364 >;	// Camera sky vector (<0,-1,0> will usually work for standard "up")
+#declare LDXCameraLoc = < 150, -150, -150 >;    // Camera Location vector
+#declare LDXCameraLookAt = < 0,0,0 >;   // Camera look-at point vector
+#declare LDXCameraSky = < -0.42426460699182555469,-0.80561720789089319439,0.41349783264746753364 >; // Camera sky vector (<0,-1,0> will usually work for standard "up")
 
-#declare LDXFloorLoc = LDXMaxY;	// Floor location. (Dependent on floor axis; MAX_Y is bottom of model)
-#declare LDXFloorAxis = y;	// Floor axis (x, y, or z)
-#declare LDXFloorR = 0.8;	// Floor Red
-#declare LDXFloorG = 0.8;	// Floor Green
-#declare LDXFloorB = 0.8;	// Floor Blue
-#declare LDXFloorAmb = 0.4;	// Floor Ambient
-#declare LDXFloorDif = 0.4;	// Floor Diffuse
+#declare LDXFloorLoc = LDXMaxY; // Floor location. (Dependent on floor axis; MAX_Y is bottom of model)
+#declare LDXFloorAxis = y;  // Floor axis (x, y, or z)
+#declare LDXFloorR = 0.8;   // Floor Red
+#declare LDXFloorG = 0.8;   // Floor Green
+#declare LDXFloorB = 0.8;   // Floor Blue
+#declare LDXFloorAmb = 0.4; // Floor Ambient
+#declare LDXFloorDif = 0.4; // Floor Diffuse
 #declare LDXAmb = 0.4;
 #declare LDXDif = 0.4;
 #declare LDXRefl = 0.08;
@@ -56,21 +56,21 @@
 #declare LDXChromeBril = 5;
 #declare LDXChromeSpec = 0.8;
 #declare LDXChromeRough = 0.01;
-#declare LDXIPov = 1;	// Use inline POV code from LDraw file? (1 = YES; 0 = NO)
-#declare LDXBgR = 1;	// Background Red
-#declare LDXBgG = 1;	// Background Green
-#declare LDXBgB = 1;	// Background Blue
-#declare LDXOrigVer = version;	// DO NOT MODIFY
+#declare LDXIPov = 1;   // Use inline POV code from LDraw file? (1 = YES; 0 = NO)
+#declare LDXBgR = 1;    // Background Red
+#declare LDXBgG = 1;    // Background Green
+#declare LDXBgB = 1;    // Background Blue
+#declare LDXOrigVer = version;  // DO NOT MODIFY
 
 // Camera
 #ifndef (LDXSkipCamera)
 camera {
-	#declare LDXCamAspect = image_width/image_height;
-	location LDXCameraLoc
-	sky LDXCameraSky
-	right LDXCamAspect * < -1,0,0 >
-	look_at LDXCameraLookAt
-	angle 63
+    #declare LDXCamAspect = image_width/image_height;
+    location LDXCameraLoc
+    sky LDXCameraSky
+    right LDXCamAspect * < -1,0,0 >
+    look_at LDXCameraLookAt
+    angle 63
 }
 #end
 
@@ -134,55 +134,55 @@ background { color rgb <LDXBgR,LDXBgG,LDXBgB> }
 
 #ifndef (LDXColor1) // Blue
 #declare LDXColor1 = #if (version >= 3.1) material { #end
-	texture {
-		lg_blue
-	}
+    texture {
+        lg_blue
+    }
 #if (version >= 3.1) } #end
 #declare LDXColor1_slope = #if (version >= 3.1) material { #end
-	texture {
-		lg_blue
-		#if (LDXQual > 1) normal { bumps 0.3 scale 25*0.02 } #end
-	}
+    texture {
+        lg_blue
+        #if (LDXQual > 1) normal { bumps 0.3 scale 25*0.02 } #end
+    }
 #if (version >= 3.1) } #end
 #end
 
 #ifndef (LDXColor7) // Light Grey
 #declare LDXColor7 = #if (version >= 3.1) material { #end
-	texture {
-		lg_grey
-	}
+    texture {
+        lg_grey
+    }
 #if (version >= 3.1) } #end
 #declare LDXColor7_slope = #if (version >= 3.1) material { #end
-	texture {
-		lg_grey
-		#if (LDXQual > 1) normal { bumps 0.3 scale 25*0.02 } #end
-	}
+    texture {
+        lg_grey
+        #if (LDXQual > 1) normal { bumps 0.3 scale 25*0.02 } #end
+    }
 #if (version >= 3.1) } #end
 #end
 
 #include "lg_3010.inc" // Brick  1 x  4
 
 #declare LDX_1x4_dash_blue_dot_ldr = union {
-	object {
-		lg_3010
-		matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
-		rotate <0, 360 * clock, 0>
-		LDXSeamMatrix(80, 28, 20, 0, 10, 0)
-		matrix <1,0,0,0,1,0,0,0,1,-30,-32,0>
-		#if (version >= 3.1) material #else texture #end { LDXColor1 }
-	}
+    object {
+        lg_3010
+        matrix <0,0,-25,-25,0,0,0,-25,0,0,0,0>
+        rotate <0, 360 * clock, 0>
+        LDXSeamMatrix(80, 28, 20, 0, 10, 0)
+        matrix <1,0,0,0,1,0,0,0,1,-30,-32,0>
+        #if (version >= 3.1) material #else texture #end { LDXColor1 }
+    }
 #if (LDXRefls = 0)
-	no_reflection
+    no_reflection
 #end
 #if (LDXShads = 0)
-	no_shadow
+    no_shadow
 #end
 }
 
 // 1x4-blue.ldr
 object {
-	LDX_1x4_dash_blue_dot_ldr
-	#if (version >= 3.1) material #else texture #end { LDXColor7 }
+    LDX_1x4_dash_blue_dot_ldr
+    #if (version >= 3.1) material #else texture #end { LDXColor7 }
 }
 
 // Floor
